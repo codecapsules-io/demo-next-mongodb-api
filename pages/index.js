@@ -21,7 +21,7 @@ const Index = () => {
   const getWithAxios = (e) => {
     e.preventDefault()
     const data = { id: nameId}
-    axios.get('/api/person/' + nameId)
+    axios.post('/api/getperson', data)
       .then(response => {
         console.log(response)
         setRetrievedName(response.data.name)
